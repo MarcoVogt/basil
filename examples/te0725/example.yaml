@@ -1,0 +1,39 @@
+#
+# ------------------------------------------------------------
+# Copyright (c) All rights reserved
+# SiLab, Institute of Physics, University of Bonn
+# ------------------------------------------------------------
+#
+
+transfer_layer:
+  - name  : uart
+    type  : SiUart
+    init:
+      avoid_download : True
+      bit_file  : firmware/vivado/te0725.runs/impl_1/te0725.bit
+      board_id  : 1
+      port      : /dev/ttyUSB0
+      baudrate  : 115200
+      stopbits  : 1
+      bytesize  : 8
+      timeout   : 0.1    
+
+hw_drivers:
+  - name      : gpio_drv
+    type      : gpio
+    interface : uart
+    base_addr : 0x0000
+    size      : 8
+
+registers:
+  - name        : GPIO_LED
+    type        : StdRegister
+    hw_driver   : gpio_drv
+    size        : 8
+    fields:
+      - name    : DIP
+        size    : 4
+        offset  : 7
+      - name    : LED
+        size    : 4
+        offset  : 3
