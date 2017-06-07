@@ -38,6 +38,9 @@ examples/lx9/device/src/SiTCP
 .pydevproject
 .vcd
 
+# Temp files
+*.*~
+
 # Mac
 .DS_Store
 tests/qverilog.log
