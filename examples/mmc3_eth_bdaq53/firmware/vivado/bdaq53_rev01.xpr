@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="10" Path="/faust/user/mvogt/xilinx/projects/BDAQ53/bdaq53_rev01/bdaq53_rev01.xpr">
+<Project Version="7" Minor="10" Path="/faust/user/mvogt/git/basil_fork-marco_BDAQ53/examples/mmc3_eth_bdaq53/firmware/vivado/bdaq53_rev01.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="f0d03bbae51045ed957d8c1d95443147"/>
@@ -18,8 +18,6 @@
     <Option Name="BoardPart" Val=""/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../themperek/tmp/ip_repo/myip2_1.0"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../themperek/tmp/ip_repo/myip_1.0"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
     <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
     <Option Name="IPUserFilesDir" Val="$PPRDIR/bdaq53_rev01.ip_user_files"/>
@@ -29,179 +27,179 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../../../git/basil_marco/firmware/modules/rx_aurora_64b66b_1lane_kintex/aurora_64b66b_0_cdc_sync_exdes.v">
+      <File Path="$PPRDIR/../../../../firmware/modules/rx_aurora_64b66b_1lane_kintex/aurora_64b66b_0_cdc_sync_exdes.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../git/basil_marco/firmware/modules/rx_aurora_64b66b_1lane_kintex/support/aurora_64b66b_0_clock_module.v">
+      <File Path="$PPRDIR/../../../../firmware/modules/rx_aurora_64b66b_1lane_kintex/support/aurora_64b66b_0_support_reset_logic.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../git/basil_marco/firmware/modules/rx_aurora_64b66b_1lane_kintex/support/aurora_64b66b_0_support_reset_logic.v">
+      <File Path="$PPRDIR/../../../../firmware/modules/rx_aurora_64b66b_1lane_kintex/support/aurora_64b66b_0_gt_common_wrapper.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../git/basil_marco/firmware/modules/rx_aurora_64b66b_1lane_kintex/support/aurora_64b66b_0_gt_common_wrapper.v">
+      <File Path="$PPRDIR/../../../../firmware/modules/rx_aurora_64b66b_1lane_kintex/support/aurora_64b66b_0_clock_module.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../git/basil_marco/firmware/modules/rx_aurora_64b66b_1lane_kintex/support/aurora_64b66b_0_support.v">
+      <File Path="$PPRDIR/../../../../firmware/modules/rx_aurora_64b66b_1lane_kintex/support/aurora_64b66b_0_support.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../git/basil_marco/firmware/modules/utils/generic_fifo.v">
+      <File Path="$PPRDIR/../../../../firmware/modules/utils/generic_fifo.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../git/basil_marco/firmware/modules/utils/cdc_syncfifo.v">
+      <File Path="$PPRDIR/../../../../firmware/modules/utils/cdc_syncfifo.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../git/basil_marco/firmware/modules/utils/cdc_reset_sync.v">
+      <File Path="$PPRDIR/../../../../firmware/modules/utils/cdc_reset_sync.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../git/basil_marco/firmware/modules/utils/cdc_pulse_sync.v">
+      <File Path="$PPRDIR/../../../../firmware/modules/utils/cdc_pulse_sync.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../git/basil_marco/firmware/modules/rx_aurora_64b66b_1lane_kintex/aurora_64b66b_0_exdes.v">
+      <File Path="$PPRDIR/../../../../firmware/modules/rx_aurora_64b66b_1lane_kintex/aurora_64b66b_0_exdes.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../git/basil_marco/firmware/modules/rx_aurora_64b66b_1lane_kintex/rx_aurora_64b66b_core.v">
+      <File Path="$PPRDIR/../../../../firmware/modules/rx_aurora_64b66b_1lane_kintex/rx_aurora_64b66b_core.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../git/basil_marco/firmware/modules/cmd_rd53/cmd_rd53_core.v">
+      <File Path="$PPRDIR/../../../../firmware/modules/cmd_rd53/cmd_rd53_core.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../git/basil_marco/firmware/modules/utils/bus_to_ip.v">
+      <File Path="$PPRDIR/../../../../firmware/modules/utils/bus_to_ip.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../SiTCP/XC7KSiTCPlib32k_10V/TIMER.v">
+      <File Path="$PPRDIR/../../../../../SiTCP/XC7KSiTCPlib32k_10V/TIMER.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../SiTCP/XC7KSiTCPlib32k_10V/SiTCP_XC7K_32K_BBT_V100.V">
+      <File Path="$PPRDIR/../../../../../SiTCP/XC7KSiTCPlib32k_10V/SiTCP_XC7K_32K_BBT_V100.V">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../SiTCP/XC7KSiTCPlib32k_10V/SiTCP_XC7K_32K_BBT_V100.ngc">
+      <File Path="$PPRDIR/../../../../../SiTCP/XC7KSiTCPlib32k_10V/SiTCP_XC7K_32K_BBT_V100.ngc">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../git/basil_marco/firmware/modules/rx_aurora_64b66b_1lane_kintex/rx_aurora_64b66b.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../git/basil_marco/firmware/modules/utils/rgmii_io.v">
+      <File Path="$PPRDIR/../../../../firmware/modules/rx_aurora_64b66b_1lane_kintex/rx_aurora_64b66b.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../git/basil_marco/firmware/modules/utils/rbcp_to_bus.v">
+      <File Path="$PPRDIR/../../../../firmware/modules/utils/rbcp_to_bus.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../git/basil_marco/firmware/modules/gpio/gpio.v">
+      <File Path="$PPRDIR/../../../../firmware/modules/gpio/gpio.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../git/basil_marco/firmware/modules/utils/fifo_32_to_8.v">
+      <File Path="$PPRDIR/../../../../firmware/modules/utils/fifo_32_to_8.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../git/basil_marco/firmware/modules/cmd_rd53/cmd_rd53.v">
+      <File Path="$PPRDIR/../../../../firmware/modules/cmd_rd53/cmd_rd53.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../SiTCP/XC7KSiTCPlib32k_10V/WRAP_SiTCP_GMII_XC7K_32K.V">
+      <File Path="$PPRDIR/../../../../firmware/modules/utils/rgmii_io.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/bdaq53.v">
+      <File Path="$PPRDIR/../../../../../SiTCP/XC7KSiTCPlib32k_10V/WRAP_SiTCP_GMII_XC7K_32K.V">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../bdaq53_rev0/bdaq53_rev0.srcs/sources_1/new/bdaq53.v"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../src/bdaq53.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../src/bdaq53.v"/>
           <Attr Name="ImportTime" Val="1495206499"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/data_handler.v">
+      <File Path="$PPRDIR/../src/data_handler.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../bdaq53_rev0/bdaq53_rev0.srcs/sources_1/new/data_handler.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../src/data_handler.v"/>
           <Attr Name="ImportTime" Val="1492518005"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -216,16 +214,13 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PSRCDIR/constrs_1/imports/mvogt/git/basil_marco/examples/mmc3_eth/firmware/src/mmc3.xdc">
+      <File Path="$PPRDIR/mmc3.xdc">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../git/basil_marco/examples/mmc3_eth/firmware/src/mmc3.xdc"/>
-          <Attr Name="ImportTime" Val="1491834768"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
       <Config>
-        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/mvogt/git/basil_marco/examples/mmc3_eth/firmware/src/mmc3.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
@@ -239,7 +234,7 @@
       </Config>
     </FileSet>
     <FileSet Name="aurora_64b66b_1lane" Type="BlockSrcs" RelSrcDir="$PSRCDIR/aurora_64b66b_1lane">
-      <File Path="$PSRCDIR/sources_1/ip/aurora_64b66b_1lane/aurora_64b66b_1lane.xci">
+      <File Path="$PPRDIR/../../../../../../xilinx/projects/BDAQ53/bdaq53_rev01/bdaq53_rev01.srcs/sources_1/ip/aurora_64b66b_1lane/aurora_64b66b_1lane.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -274,21 +269,19 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="10">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7k160tfbg676-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7k160tfbg676-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="aurora_64b66b_1lane_synth_1" Type="Ft3:Synth" SrcSet="aurora_64b66b_1lane" Part="xc7k160tfbg676-1" ConstrsSet="aurora_64b66b_1lane" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/aurora_64b66b_1lane_synth_1" IncludeInArchive="true">
+    <Run Id="aurora_64b66b_1lane_synth_1" Type="Ft3:Synth" SrcSet="aurora_64b66b_1lane" Part="xc7k160tfbg676-1" ConstrsSet="aurora_64b66b_1lane" Description="Vivado Synthesis Defaults" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7k160tfbg676-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7k160tfbg676-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
         <Step Id="init_design"/>
@@ -303,7 +296,6 @@
           <Option Id="BinFile">1</Option>
         </Step>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="aurora_64b66b_1lane_impl_1" Type="Ft2:EntireDesign" Part="xc7k160tfbg676-1" ConstrsSet="aurora_64b66b_1lane" Description="Vivado Implementation Defaults" SynthRun="aurora_64b66b_1lane_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
