@@ -1,0 +1,14 @@
+Offset  default purpose
+-----------------------
+0x12-17         MAC address
+0x18-1B         IP address
+0x1C-1D 0x18    TCP port (main)
+0x1E-1F 0x17    TCP port (alternative)
+0x20-21 0x05B4  TCP MSS (number of bytes)
+0x22-23 0x1234  RBCP port
+0x24-25 0x03E8  TCP keep-alive-packet transmission timer (with data in tx buffer) /ms
+0x26-27 0xEA60  TCP keep-alive-packet transmission timer (with empty tx buffer) /ms
+0x28-29 0x1388  Time-out duration when TCP opens /ms
+0x2A-2B 0x2BF2  Time-out duration when TCP closes /256ms
+0x2C-2D 0x01F4  Waiting time between TCP connections /ms
+0x2E-2F 0x01F4  Time-out duration of TCP re-transmission time /ms

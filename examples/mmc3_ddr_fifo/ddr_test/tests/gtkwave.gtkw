@@ -1,0 +1,147 @@
+[*]
+[*] GTKWave Analyzer v3.3.72 (w)1999-2016 BSI
+[*] Fri Feb 17 11:36:20 2017
+[*]
+[dumpfile] "/faust/user/mvogt/git/basil_dev_ddr_integration/examples/mmc3_ddr_fifo/ddr_test/tests/dram_test.vcd"
+[dumpfile_mtime] "Fri Feb 17 10:02:37 2017"
+[dumpfile_size] 6324
+[savefile] "/faust/user/mvogt/git/basil/examples/mmc3_ddr_fifo/ddr_test/tests/gtkwave.gtkw"
+[timestart] 0
+[size] 1770 1044
+[pos] -1 -1
+*-22.071659 15038400 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb.
+[treeopen] tb.dut.
+[treeopen] tb.dut.i_out_fifo.
+[treeopen] tb.dut.i_out_fifo.i_ddr_fifo.
+[treeopen] tb.dut.i_out_fifo.i_ddr_fifo.i_buf_fifo.
+[sst_width] 320
+[signals_width] 323
+[sst_expanded] 1
+[sst_vpaned_height] 307
+@200
+-fifo_core
+@22
+tb.dut.i_out_fifo.i_ddr_fifo.BUS_ADD[31:0]
+@28
+tb.dut.i_out_fifo.i_ddr_fifo.BUS_CLK
+@22
+tb.dut.i_out_fifo.i_ddr_fifo.BUS_DATA_IN[7:0]
+tb.dut.i_out_fifo.i_ddr_fifo.BUS_DATA_IN_DATA[31:0]
+tb.dut.i_out_fifo.i_ddr_fifo.BUS_DATA_OUT[7:0]
+tb.dut.i_out_fifo.i_ddr_fifo.BUS_DATA_OUT_DATA[31:0]
+@28
+tb.dut.i_out_fifo.i_ddr_fifo.BUS_RD
+tb.dut.i_out_fifo.i_ddr_fifo.BUS_RD_DATA
+tb.dut.i_out_fifo.i_ddr_fifo.BUS_RST
+tb.dut.i_out_fifo.i_ddr_fifo.BUS_WR
+tb.dut.i_out_fifo.i_ddr_fifo.BUS_WR_DATA
+@22
+tb.dut.i_out_fifo.i_ddr_fifo.CONF_READ_ERROR[7:0]
+tb.dut.i_out_fifo.i_ddr_fifo.CONF_SIZE[31:0]
+tb.dut.i_out_fifo.i_ddr_fifo.CONF_SIZE_BYTE[31:0]
+tb.dut.i_out_fifo.i_ddr_fifo.CONF_SIZE_BYTE_BUF[31:0]
+tb.dut.i_out_fifo.i_ddr_fifo.FIFO_ALMOST_EMPTY_VALUE[7:0]
+tb.dut.i_out_fifo.i_ddr_fifo.FIFO_ALMOST_FULL_VALUE[7:0]
+tb.dut.i_out_fifo.i_ddr_fifo.FIFO_DATA[31:0]
+tb.dut.i_out_fifo.i_ddr_fifo.FIFO_DATA_BUF[31:0]
+@28
+tb.dut.i_out_fifo.i_ddr_fifo.FIFO_EMPTY_IN
+tb.dut.i_out_fifo.i_ddr_fifo.FIFO_EMPTY_IN_BUF
+tb.dut.i_out_fifo.i_ddr_fifo.FIFO_FULL
+tb.dut.i_out_fifo.i_ddr_fifo.FIFO_NEAR_FULL
+tb.dut.i_out_fifo.i_ddr_fifo.FIFO_NOT_EMPTY
+tb.dut.i_out_fifo.i_ddr_fifo.FIFO_READ_ERROR
+tb.dut.i_out_fifo.i_ddr_fifo.FIFO_READ_NEXT_OUT
+tb.dut.i_out_fifo.i_ddr_fifo.FULL_BUF
+tb.dut.i_out_fifo.i_ddr_fifo.RST
+tb.dut.i_out_fifo.i_ddr_fifo.SOFT_RST
+@22
+tb.dut.i_out_fifo.i_ddr_fifo.USB_DATA[7:0]
+@28
+tb.dut.i_out_fifo.i_ddr_fifo.USB_READ
+@200
+-
+-bus_to_ip_data
+@22
+tb.dut.i_out_fifo.i_bus_to_ip_data.BUS_ADD[63:0]
+tb.dut.i_out_fifo.i_bus_to_ip_data.BUS_DATA[31:0]
+@28
+tb.dut.i_out_fifo.i_bus_to_ip_data.BUS_RD
+tb.dut.i_out_fifo.i_bus_to_ip_data.BUS_WR
+tb.dut.i_out_fifo.i_bus_to_ip_data.CS
+@22
+tb.dut.i_out_fifo.i_bus_to_ip_data.IP_ADD[63:0]
+tb.dut.i_out_fifo.i_bus_to_ip_data.IP_DATA_IN[31:0]
+tb.dut.i_out_fifo.i_bus_to_ip_data.IP_DATA_OUT[31:0]
+@28
+tb.dut.i_out_fifo.i_bus_to_ip_data.IP_RD
+tb.dut.i_out_fifo.i_bus_to_ip_data.IP_WR
+@22
+tb.dut.i_out_fifo.i_bus_to_ip_data.TMP[31:0]
+@200
+-
+-bus_to_ip_control
+@22
+tb.dut.i_out_fifo.i_bus_to_ip_control.BUS_ADD[31:0]
+tb.dut.i_out_fifo.i_bus_to_ip_control.BUS_DATA[7:0]
+@28
+tb.dut.i_out_fifo.i_bus_to_ip_control.BUS_RD
+tb.dut.i_out_fifo.i_bus_to_ip_control.BUS_WR
+tb.dut.i_out_fifo.i_bus_to_ip_control.CS
+@22
+tb.dut.i_out_fifo.i_bus_to_ip_control.IP_ADD[31:0]
+tb.dut.i_out_fifo.i_bus_to_ip_control.IP_DATA_IN[7:0]
+tb.dut.i_out_fifo.i_bus_to_ip_control.IP_DATA_OUT[7:0]
+@28
+tb.dut.i_out_fifo.i_bus_to_ip_control.IP_RD
+tb.dut.i_out_fifo.i_bus_to_ip_control.IP_WR
+@22
+tb.dut.i_out_fifo.i_bus_to_ip_control.TMP[7:0]
+@200
+-
+-gpio_control
+@22
+tb.dut.i_gpio_control.BUS_ADD[15:0]
+@28
+tb.dut.i_gpio_control.BUS_CLK
+@22
+tb.dut.i_gpio_control.BUS_DATA[7:0]
+@28
+tb.dut.i_gpio_control.BUS_RD
+tb.dut.i_gpio_control.BUS_RST
+tb.dut.i_gpio_control.BUS_WR
+@22
+tb.dut.i_gpio_control.IO[7:0]
+tb.dut.i_gpio_control.IP_ADD[15:0]
+tb.dut.i_gpio_control.IP_DATA_IN[7:0]
+tb.dut.i_gpio_control.IP_DATA_OUT[7:0]
+@28
+tb.dut.i_gpio_control.IP_RD
+tb.dut.i_gpio_control.IP_WR
+tb.dut.i_gpio_control.RST
+tb.dut.i_gpio_control.SOFT_RST
+@22
+tb.dut.i_gpio_control.bi
+@200
+-
+-usb
+@22
+tb.ADD[31:0]
+tb.BUS_DATA[7:0]
+@28
+tb.FCLK_IN
+@22
+tb.FD[7:0]
+@28
+tb.FMODE
+tb.FREAD
+@29
+tb.FSTROBE
+@22
+tb.LED[4:0]
+@28
+tb.RD_B
+tb.WR_B
+[pattern_trace] 1
+[pattern_trace] 0
