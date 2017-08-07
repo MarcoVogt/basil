@@ -43,7 +43,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../src/SiTCP/SiTCP_XC7K_32K_BBT_V80.v">
+      <File Path="$PPRDIR/../src/SiTCP/SiTCP_XC7K_32K_BBT_V110.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -85,7 +85,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../src/SiTCP/SiTCP_XC7K_32K_BBT_V80.V">
+      <File Path="$PPRDIR/../src/SiTCP/SiTCP_XC7K_32K_BBT_V110.V">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
