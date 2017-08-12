@@ -13,7 +13,9 @@ module tlu_controller
     parameter       HIGHADDR = 16'h0000, 
     parameter       ABUSWIDTH = 16,
     parameter       DIVISOR = 8,
-    parameter       TLU_TRIGGER_MAX_CLOCK_CYCLES = 17
+    parameter       WIDTH = 8,
+    parameter       TLU_TRIGGER_MAX_CLOCK_CYCLES = 17,
+    parameter       TIMESTAMP_N_OF_BIT = 32
 )
 (
     input wire                  BUS_CLK,
@@ -31,8 +33,8 @@ module tlu_controller
     
     output wire                 FIFO_PREEMPT_REQ,
     
-    input wire      [7:0]       TRIGGER,
-    input wire      [7:0]       TRIGGER_VETO,
+    input wire  [WIDTH-1:0]     TRIGGER,
+    input wire  [WIDTH-1:0]     TRIGGER_VETO,
     
     input wire                  EXT_TRIGGER_ENABLE,
     input wire                  TRIGGER_ACKNOWLEDGE,
@@ -72,7 +74,9 @@ bus_to_ip #(
 tlu_controller_core #(
     .DIVISOR(DIVISOR),
     .ABUSWIDTH(ABUSWIDTH),
-    .TLU_TRIGGER_MAX_CLOCK_CYCLES(TLU_TRIGGER_MAX_CLOCK_CYCLES)
+    .TLU_TRIGGER_MAX_CLOCK_CYCLES(TLU_TRIGGER_MAX_CLOCK_CYCLES),
+    .WIDTH(WIDTH),
+    .TIMESTAMP_N_OF_BIT(TIMESTAMP_N_OF_BIT)
 ) i_tlu_controller_core (
     .BUS_CLK(BUS_CLK),
     .BUS_RST(BUS_RST),

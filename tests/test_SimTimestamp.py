@@ -13,44 +13,44 @@ import numpy as np
 
 from basil.dut import Dut
 from basil.utils.sim.utils import cocotb_compile_and_run, cocotb_compile_clean
-
+import time
 
 cnfg_yaml = """
 transfer_layer:
-  - name  : intf
+  - name  : INTF
     type  : SiSim
     init:
         host : localhost
         port  : 12345
 
 hw_drivers:
-  - name      : gpio
+  - name      : GPIO
     type      : gpio
-    interface : intf
+    interface : INTF
     base_addr : 0x0000
     size      : 64
 
   - name      : timestamp
     type      : timestamp
-    interface : intf
+    interface : INTF
     base_addr : 0x1000
 
 
   - name      : PULSE_GEN
     type      : pulse_gen
-    interface : intf
+    interface : INTF
     base_addr : 0x3000
 
-  - name      : fifo
-    type      : sram_fifo
-    interface : intf
+  - name      : FIFO
+    type      : bram_fifo
+    interface : INTF
     base_addr : 0x8000
     base_data_addr: 0x80000000
 
 registers:
   - name        : timestamp_value
     type        : StdRegister
-    hw_driver   : gpio
+    hw_driver   : GPIO
     size        : 64
     fields:
       - name    : OUT3
@@ -75,33 +75,33 @@ class TestSimTimestamp(unittest.TestCase):
 
     def test_io(self):
         self.chip['timestamp'].reset()
-        self.chip['gpio'].reset()
+        self.chip['GPIO'].reset()
 
-        self.chip['fifo'].reset()
-        ret = self.chip['fifo'].get_fifo_size()
+        self.chip['FIFO'].reset()
+        ret = self.chip['FIFO'].get_FIFO_SIZE()
         self.assertEqual(ret, 0)
 
         # trigger timestamp
-        self.chip['PULSE_GEN'].set_delay(0x105)
-        self.chip['PULSE_GEN'].set_width(10)
-        self.chip['PULSE_GEN'].set_repeat(1)
-        self.assertEqual(self.chip['PULSE_GEN'].get_delay(), 0x105)
-        self.assertEqual(self.chip['PULSE_GEN'].get_width(), 10)
-        self.assertEqual(self.chip['PULSE_GEN'].get_repeat(), 1)
+        self.chip['PULSE_GEN'].set_DELAY(0x105)
+        self.chip['PULSE_GEN'].set_WIDTH(10)
+        self.chip['PULSE_GEN'].set_REPEAT(1)
+        self.assertEqual(self.chip['PULSE_GEN'].get_DELAY(), 0x105)
+        self.assertEqual(self.chip['PULSE_GEN'].get_WIDTH(), 10)
+        self.assertEqual(self.chip['PULSE_GEN'].get_REPEAT(), 1)
 
         self.chip['PULSE_GEN'].start()
-        while(not self.chip['PULSE_GEN'].is_done()):
+        while(not self.chip['PULSE_GEN'].is_ready):
             pass
         
-        ## get data from fifo
-        ret = self.chip['fifo'].get_fifo_size()
+        ## get data from FIFO
+        ret = self.chip['FIFO'].get_FIFO_SIZE()
         self.assertEqual(ret, 3*4)
 
-        ret = self.chip['fifo'].get_data()
+        ret = self.chip['FIFO'].get_data()
         self.assertEqual(len(ret), 3)
 
-        ## check with gpio
-        ret2 = self.chip['gpio'].get_data()
+        ## check with GPIO
+        ret2 = self.chip['GPIO'].get_data()
         self.assertEqual(len(ret2), 8)
 
         for i,r in enumerate(ret):
@@ -117,6 +117,7 @@ class TestSimTimestamp(unittest.TestCase):
         self.assertEqual(ret[1]&0xFFFFFF,0x10000*ret2[2]+0x100*ret2[3]+ret2[4])
         self.assertEqual(ret[1]&0xFFFFFF,0x100*ret2[0]+ret2[1])
 
+    
     def test_dut_iter(self):
         conf = yaml.safe_load(cnfg_yaml)
 
@@ -131,9 +132,11 @@ class TestSimTimestamp(unittest.TestCase):
         for mod, mcnf in zip(self.chip, iter_conf()):
             self.assertEqual(mod.name, mcnf['name'])
             self.assertEqual(mod.__class__.__name__, mcnf['type'])
-
+    
+    
     def tearDown(self):
         self.chip.close()  # let it close connection and stop simulator
+        time.sleep(5)
         cocotb_compile_clean()
 
 if __name__ == '__main__':
