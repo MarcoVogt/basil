@@ -1,5 +1,4 @@
 `timescale 1ns / 1ps
-
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -34,26 +33,26 @@ module simplified_tb(
     localparam NOVETO = 1;
     
     localparam NR_OF_RUNS        = 2;
-    localparam STOP_AFTER_RUNS   = 1;
+    localparam STOP_AFTER_RUNS   = 0;
     localparam CONF_WAITCYCLES   = 0;
     localparam CONF_SWAPCHANNELS = 0;
     localparam CHUNKSIZE         = 0;   
 
-    localparam CONF_BURSTLENGTH_IN_BYTES = 512;
+    localparam CONF_BURSTLENGTH_IN_BYTES = 64;
     localparam CONF_BUSWIDTH_IN_BYTES    = 4;
         
     localparam BURSTLENGTH          = CONF_BURSTLENGTH_IN_BYTES/CONF_BUSWIDTH_IN_BYTES;
     
-    localparam WRITEDEPTH           = 32*(BURSTLENGTH);
-    localparam READDEPTH            = 32*(BURSTLENGTH);      
-    localparam MEMDEPTH             = 32*1024*1024;
-    localparam CONF_READ_TIMEOUT    = READDEPTH;
+    localparam WRITEDEPTH           = 2 * (BURSTLENGTH);
+    localparam READDEPTH            = 2 * (BURSTLENGTH);      
+    localparam MEMDEPTH             = 32 * 1024*1024;
+    localparam CONF_READ_TIMEOUT    = 4 * READDEPTH;
 
     localparam DEBUG_SUPPRESS_TLAST = 1;
         
         
     //general clock 200 MHz
-    parameter PERIOD = 5.0;
+    parameter PERIOD = 10.0;
     
     //DDR controller clock 200 MHz
     parameter PERIOD_DDR = 5.0;
@@ -164,9 +163,9 @@ module simplified_tb(
     reg int_burst_strobe = 1'b0;
 //    assign int_burst_strobe = ( wr_word_cnt_temp[6:0] == BURSTLENGTH-1 ) ? 1'b1 : 1'b0;
 
-//    wire vfifo_empty, vfifo_full;
     assign vfifo_empty = (ext_vfifo_mm2s_channel_empty == 2'b11) ? 1'b1 : 1'b0;
     assign vfifo_full  = (ext_vfifo_s2mm_channel_full  != 2'b00) ? 1'b1 : 1'b0;
+    assign ext_vfifo_mm2s_channel_full = 2'b00;     //  <------------------------------------------------------------- TEST because ext_vfifo_mm2s_channel_full==ZZ
     
     
 // DEBUGGING
@@ -237,7 +236,7 @@ module simplified_tb(
             
             case (state)      
                 state_idle: begin
-                    if ((!WAIT_FOR_INIT || init_calib_complete) && !start_veto || NOVETO)      //wait for ddr3 init complete
+                    if ((!WAIT_FOR_INIT || init_calib_complete) && (!start_veto || NOVETO))      //wait for ddr3 init complete
                         state <= state_wr;
                 end
                 
@@ -342,12 +341,11 @@ module simplified_tb(
 
 
 
-    axi_ddrvfifo vfifo_inst0 (
+    axi_ddrvfifo i_axi_ddrvfifo (
         .aclk(aclk),
         .aresetn(aresetn),
         
-        .sys_clk_p(sys_clk_p),
-        .sys_clk_n(sys_clk_n),
+        .sys_clk_i(sys_clk_i),        
 
         //Generic FIFO style interface
         .read(read),

@@ -57,3 +57,10 @@ examples/mmc3_eth/firmware/src/SiTCP
 examples/mio3_eth_gpac/firmware/vivado/*
 !examples/mio3_eth_gpac/firmware/vivado/*.xpr
 examples/mio3_eth_gpac/firmware/src/SiTCP
+
+examples/mmc3_eth_with_ddr3/firmware/vivado/*
+examples/mmc3_eth_with_ddr3/firmware/src/*
+!examples/mmc3_eth_with_ddr3/firmware/vivado/*.xpr
+examples/mmc3_eth_with_ddr3/firmware/src/SiTCP
+
+examples/mmc3_ddr_fifo/*
